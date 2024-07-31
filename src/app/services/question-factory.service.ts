@@ -15,7 +15,7 @@ export class QuestionFactoryService {
       case 'text':
         return this.createTextQuestion();
       case 'longtext':
-         return this.createTextQuestion(200);
+         return this.createLongTextQuestion();
       default:
         throw new Error('Unsupported activity type: ' + type);
     }
@@ -31,6 +31,13 @@ export class QuestionFactoryService {
     };
   }
 
-  
+  private createLongTextQuestion(maxlength: number = 200): QuestionText {
+    return {
+      type: 'longtext',
+      required: false,
+      maxlength
+    };
+  }
+
 
 }
