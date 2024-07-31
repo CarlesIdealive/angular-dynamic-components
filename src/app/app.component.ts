@@ -29,7 +29,7 @@ export class AppComponent {
     this.questions.push(question);
     const activityComponent = this.getQuestionComponent(this.selectedQuestionType);
     const componentRef = this.container.createComponent(activityComponent);
-    componentRef.instance.activity = question;
+    componentRef.instance.question = question;
   }
 
 
