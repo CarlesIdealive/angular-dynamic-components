@@ -1,10 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { QuestionText } from '../../../interfaces/questionText';
+import { QuestionText } from '../../interfaces/questionText';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-text',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './text.component.html',
   styleUrl: './text.component.css'
 })

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Question } from '../../interfaces/question';
-import { QuestionText } from '../../interfaces/questionText';
+import { Question } from '../interfaces/question';
+import { QuestionText } from '../interfaces/questionText';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class QuestionFactoryService {
 
   constructor() { }
 
-
+  //TODO: pasar-li el ID que podria ser el nom de la pregunta
   createQuestion(type: string): Question {
     switch(type) {
       case 'text':
